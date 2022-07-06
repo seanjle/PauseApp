@@ -4,6 +4,7 @@
        padding: 0;
        margin: 0;
        box-sizing: border-box;
+       font-family: sanfran !important;
    }
    
    html {
@@ -13,7 +14,6 @@
        -o-background-size: cover;
        background-size: cover;
        scroll-behavior: smooth;
-       font-family: 'Nunito Sans', sans-serif;
        -webkit-font-smoothing: antialiased;
        -moz-osx-font-smoothing: grayscale;
        color: #333333;
@@ -35,14 +35,27 @@
    }
    
    h1 {
-       color: #1092ce;
-    }
+       color: #2892FF;
+       font-weight: 500;
+   }
    
    h2 {
-       color: #575757;
+       color: #1D1D1F !important;
        word-break: break-all;
        font-size: 1.3em;
        font-weight: lighter;
+   }
+   
+   .card-rounded {
+       border-radius: 2.3em !important;
+       border-color: transparent;
+       background: #ffffff;
+       margin: auto;
+       height: auto;
+       width: 90%;
+       max-width: 620px;
+       padding: 1.5em;
+       box-shadow: inset 0 0 15px rgba(55, 84, 170, 0), inset 0 0 20px rgba(185, 201, 255, 0), 7px 7px 15px rgba(55, 84, 170, .15), -7px -7px 20px rgb(223, 250, 255), inset 0px 0px 4px rgba(209, 212, 255, 0.2);
    }
    
    .neumorphism-2 {
@@ -93,14 +106,35 @@
        outline: none;
        border: none;
        border-radius: 30px;
-       animation: loading;
+       animation: loadingBar;
        animation-duration: 18s;
        animation-iteration-count: infinite;
        animation-delay: 1s;
        box-shadow: 2px 2px 5px #d8d8d896, -5px -5px 10px #8a8a8a42;
    }
    
-   @keyframes loading {
+   .loadingBlueText {
+       animation: loadingBlueText;
+       animation-duration: 18s;
+       animation-iteration-count: infinite;
+       animation-delay: 1s;
+   }
+   
+   .loadingGreenText {
+       animation: loadingGreenText;
+       animation-duration: 18s;
+       animation-iteration-count: infinite;
+       animation-delay: 1s;
+   }
+   
+   .loadingPurpleText {
+       animation: loadingPurpleText;
+       animation-duration: 18s;
+       animation-iteration-count: infinite;
+       animation-delay: 1s;
+   }
+   
+   @keyframes loadingBar {
        0% {
            width: 0%;
            background-color: #b3b3b3;
@@ -135,16 +169,102 @@
        }
    }
    
+   @keyframes loadingBlueText {
+       0% {
+           color: #ffffff00;
+       }
+       6% {
+           color: #2892FF;
+       }
+       32% {
+           color: #2892FF;
+       }
+       35% {
+           color: #ffffff00;
+       }
+       67% {
+           color: #ffffff00;
+       }
+       68% {
+           color: #ffffff00;
+       }
+       99% {
+           color: #ffffff00;
+       }
+       100% {
+           color: #2771e0;
+       }
+   }
+   
+   @keyframes loadingGreenText {
+       0% {
+           color: #ffffff00;
+       }
+       1% {
+           color: #ffffff00;
+       }
+       32% {
+           color: #ffffff00;
+       }
+       35% {
+           color: #2abe79;
+       }
+       64% {
+           color: #2abe79;
+       }
+       68% {
+           color: #ffffff00;
+       }
+       99% {
+           color: #ffffff00;
+       }
+       100% {
+           color: #ffffff00;
+       }
+   }
+   
+   @keyframes loadingPurpleText {
+       0% {
+           color: #ffffff00;
+       }
+       1% {
+           color: #ffffff00;
+       }
+       34% {
+           color: #ffffff00;
+       }
+       35% {
+           color: #ffffff00;
+       }
+       64% {
+           color: #ffffff00;
+       }
+       68% {
+           color: #d027e0;
+       }
+       97% {
+           color: #d027e0;
+       }
+       100% {
+           color: #ffffff00;
+       }
+   }
+   
+   @font-face {
+       font-family: sanfran;
+       src: url(../fonts/sanfran.otf);
+   }
+   
    .txt-lb {
-       color: #2771e0;
+       color: transparent;
    }
    
    .txt-green {
-       color: #2abe79;
+       color: transparent;
    }
    
    .txt-pink {
-       color: #d027e0;
+       color: transparent;
    }
    
    .inlinediv {
@@ -174,4 +294,8 @@
    
    .txt-blue {
        color: blue !important;
+   }
+   
+   .ml-1 {
+       margin-left: 1em;
    }
